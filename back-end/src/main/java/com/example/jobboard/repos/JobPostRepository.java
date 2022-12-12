@@ -4,6 +4,10 @@ import com.example.jobboard.model.JobPost;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 public interface JobPostRepository extends JpaRepository<JobPost, Integer> {
+
+    Optional<JobPost> findJobPostsById(Integer id);
 }
