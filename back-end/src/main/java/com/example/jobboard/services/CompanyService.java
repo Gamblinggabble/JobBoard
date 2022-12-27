@@ -2,6 +2,8 @@ package com.example.jobboard.services;
 
 import com.example.jobboard.model.Company;
 import com.example.jobboard.repos.CompanyRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 import java.util.logging.Level;
@@ -9,9 +11,10 @@ import java.util.logging.Logger;
 
 import static java.util.Optional.empty;
 
-
+@Service
 public class CompanyService {
 
+    @Autowired
     private CompanyRepository companyRepository;
     private final static Logger LOGGER =
             Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);

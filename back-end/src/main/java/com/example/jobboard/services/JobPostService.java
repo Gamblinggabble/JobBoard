@@ -2,15 +2,18 @@ package com.example.jobboard.services;
 
 import com.example.jobboard.model.JobPost;
 import com.example.jobboard.repos.JobPostRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import static java.util.Optional.empty;
 
+@Service
 public class JobPostService {
 
+    @Autowired
     private JobPostRepository jobPostRepository;
     private final static Logger LOGGER =
             Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
@@ -41,14 +44,13 @@ public class JobPostService {
         }
     }
 
-    public Optional<Integer> searchJobPostById(Integer id) {
-        try {
-            Optional<JobPost> jobPostData = jobPostRepository.findJobPostsById(id);
-            jobPostData.stream().findFirst().map(JobPost::getId);
-        } catch (Exception e) {
-            LOGGER.log(Level.WARNING, "A job post with id {} was not found!", id);
+    public JobPost searchJobPostById(Integer id) {
+        Optional<JobPost> jobPost = jobPostRepository.findJobPostsById(id);
+        if (jobPost.isPresent()) {
+            return jobPost.get();
+        } else {
+            return null;
         }
-        return empty();
     }
 
 

@@ -6,4 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface Candidate_AuthRepository extends JpaRepository<Candidate_Auth, Integer> {
+
+
 }
