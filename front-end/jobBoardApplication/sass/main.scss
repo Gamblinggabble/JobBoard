@@ -3,13 +3,6 @@
 $nav-pills-link-active-bg: #57b78a;
 $nav-link-color: black;
 
-// custom variables
-$jb-body-color: #F6FFFC;
-
-body{
-    background-color: $jb-body-color;
-}
-
 
 //import bootstrap
 @import '../node_modules/bootstrap/scss/bootstrap';
