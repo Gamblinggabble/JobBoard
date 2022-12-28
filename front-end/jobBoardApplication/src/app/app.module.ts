@@ -10,6 +10,7 @@ import { AboutPageComponent } from './about-page/about-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { JobPostingListItemComponent } from './job-posting-list-item/job-posting-list-item.component';
 import { JobPostingDetailsComponent } from './job-posting-details/job-posting-details.component';
+import { JobPostingsSearchComponent } from './job-postings-search/job-postings-search.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { JobPostingDetailsComponent } from './job-posting-details/job-posting-de
     CompaniesPageComponent,
     AboutPageComponent,
     JobPostingListItemComponent,
-    JobPostingDetailsComponent
+    JobPostingDetailsComponent,
+    JobPostingsSearchComponent
   ],
   imports: [
     BrowserModule,
