@@ -35,4 +35,16 @@ public class Company {
         this.password = password;
         this.jobPosts = jobPosts;
     }
+
+    public Long getId() {
+        return this.id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
