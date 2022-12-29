@@ -7,16 +7,23 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Collection;
+
 @RestController
 public class JobPostController {
 
     @Autowired
-    private JobPostService service;
+    private JobPostService jobPostService;
 
-    @GetMapping("/jobPost/{id}")
-    public JobPost searchJobPostById(@PathVariable Integer id) {
+    @GetMapping("/jobposts/{id}")
+    public JobPost getById(@PathVariable Long id) {
         System.out.println("ID" + id);
-        return service.searchJobPostById(id);
+        return jobPostService.findJobPostById(id);
+    }
+
+    @GetMapping("/jobposts")
+    public Collection<JobPost> getAll() {
+        return jobPostService.findAllJobPosts();
     }
 
 }
