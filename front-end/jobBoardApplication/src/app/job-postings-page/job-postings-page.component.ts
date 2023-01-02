@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import * as $ from "jquery";
+import { JobPost } from '../job-post';
+import { JobpostService } from '../jobpost-service.service';
 
 @Component({
   selector: 'app-job-postings-page',
@@ -7,8 +9,15 @@ import * as $ from "jquery";
   styleUrls: ['./job-postings-page.component.scss']
 })
 export class JobPostingsPageComponent {
+
+  jobposts: JobPost[] = [];
+
+  constructor(private jobpostService: JobpostService) {}
+
   ngOnInit(): void{
-    console.log('ready'); 
+    this.jobpostService.findAll().subscribe(data =>
+      this.jobposts = data
+    )
     //this.jobPostingsToggle();
   };
 

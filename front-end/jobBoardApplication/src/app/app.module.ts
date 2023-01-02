@@ -8,9 +8,10 @@ import { JobPostingsPageComponent } from './job-postings-page/job-postings-page.
 import { CompaniesPageComponent } from './companies-page/companies-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { JobPostingListItemComponent } from './job-posting-list-item/job-posting-list-item.component';
+import { JobPostingListComponent } from './job-posting-list/job-posting-list.component';
 import { JobPostingDetailsComponent } from './job-posting-details/job-posting-details.component';
 import { JobPostingsSearchComponent } from './job-postings-search/job-postings-search.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,13 +20,14 @@ import { JobPostingsSearchComponent } from './job-postings-search/job-postings-s
     JobPostingsPageComponent,
     CompaniesPageComponent,
     AboutPageComponent,
-    JobPostingListItemComponent,
+    JobPostingListComponent,
     JobPostingDetailsComponent,
     JobPostingsSearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     NgbModule
   ],
   providers: [],
