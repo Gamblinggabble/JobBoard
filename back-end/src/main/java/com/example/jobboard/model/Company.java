@@ -20,6 +20,8 @@ public class Company {
 
     private String password;
 
+    private String imageUrl;
+
     @OneToMany
     private Set<JobPost> jobPosts;
 
@@ -27,13 +29,14 @@ public class Company {
     }
 
     public Company(String name, String email, String phoneNumber, String description,
-                   String password, Set<JobPost> jobPosts) {
+                   String password, Set<JobPost> jobPosts, String imageUrl) {
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.description = description;
         this.password = password;
         this.jobPosts = jobPosts;
+        this.imageUrl = imageUrl;
     }
 
     public Long getId() {

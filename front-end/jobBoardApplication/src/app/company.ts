@@ -5,4 +5,5 @@ export interface Company {
     phoneNumber: string;
     description: string;
     password: string;
+    imageUrl: string;
 }

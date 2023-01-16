@@ -2,7 +2,7 @@
     <div class="jb-list-item" *ngFor="let jobpost of jobposts">
         <div class="jb-company">
             <div class="jb-company-logo-container">
-                <img class="jb-company-logo" src="" alt="">
+                <img class="jb-company-logo" src={{ jobpost.company.imageUrl }} alt="">
             </div>
             <div class = "jb-company-label-container">
                 <p class = "jb-company-label">{{ jobpost.company.name }}</p>
