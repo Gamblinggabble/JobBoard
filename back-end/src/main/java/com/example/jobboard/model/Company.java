@@ -22,7 +22,7 @@ public class Company {
 
     private String imageUrl;
 
-    @OneToMany
+    @OneToMany(mappedBy = "company")
     private Set<JobPost> jobPosts;
 
     public Company() {
@@ -49,5 +49,25 @@ public class Company {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
     }
 }
