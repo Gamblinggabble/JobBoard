@@ -1,5 +1,5 @@
 <div class="jb-list-item-container">
-    <div class="jb-list-item" *ngFor="let jobpost of jobposts">
+    <div class="jb-list-item" *ngFor="let jobpost of jobposts" (click)="onJobItemClick(jobpost.id)">
         <div class="jb-company">
             <div class="jb-company-logo-container">
                 <img class="jb-company-logo" src= {{jobpost.company.imageUrl}} alt="">
