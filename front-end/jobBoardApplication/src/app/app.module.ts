@@ -14,6 +14,9 @@ import { JobPostingsSearchComponent } from './job-postings-search/job-postings-s
 import { HttpClientModule } from '@angular/common/http';
 import { ApplyPageComponent } from './apply-page/apply-page.component';
 import { ApplyFormComponent } from './apply-form/apply-form.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { RegistrationPersonPageComponent } from './registration-person-page/registration-person-page.component';
+import { RegistrationCompanyPageComponent } from './registration-company-page/registration-company-page.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { ApplyFormComponent } from './apply-form/apply-form.component';
     JobPostingDetailsComponent,
     JobPostingsSearchComponent,
     ApplyPageComponent,
-    ApplyFormComponent
+    ApplyFormComponent,
+    LoginPageComponent,
+    RegistrationPersonPageComponent,
+    RegistrationCompanyPageComponent
   ],
   imports: [
     BrowserModule,
