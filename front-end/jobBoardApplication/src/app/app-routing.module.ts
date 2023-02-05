@@ -5,6 +5,7 @@ import { ApplyPageComponent } from './apply-page/apply-page.component';
 import { CompaniesPageComponent } from './companies-page/companies-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { JobPostingsPageComponent } from './job-postings-page/job-postings-page.component';
+import { ApplyPageComponent } from './apply-page/apply-page.component';
 
 const routes: Routes = [
   {path: 'home-page-component', component: HomePageComponent},
