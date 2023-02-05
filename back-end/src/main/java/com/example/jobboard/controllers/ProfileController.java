@@ -29,8 +29,8 @@ public class ProfileController {
         profileService.saveProfileToDb(profile);
     }
 
-    @PutMapping("/updateProfileInfo/{id}")
-    public Optional<Object> updateProfile(@PathVariable("profileId") Long profileId, @RequestBody Profile newProfile) {
+    @PutMapping("/updateProfileInfo/{profileId}")
+    public Optional<Profile> updateProfile(@PathVariable("profileId") Long profileId, @RequestBody Profile newProfile) {
         return profileService.findProfileById(profileId)
                 .map((profile) -> {
                     profile.setFirstName(newProfile.getFirstName());
@@ -38,7 +38,7 @@ public class ProfileController {
                     profile.setEmail(newProfile.getEmail());
                     profile.setPassword(newProfile.getPassword());
                     profileService.saveProfileToDb(profile);
-                    return null;
+                    return profile;
                 });
 
     }

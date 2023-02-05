@@ -30,8 +30,8 @@ public class CompanyController {
         companyService.saveCompanyToDb(company);
     }
 
-    @PutMapping("/updateCompanyInfo/{id}")
-    public Optional<Object> updateCompany(@PathVariable("companyId") Long companyId, @RequestBody Company newCompany) {
+    @PutMapping("/updateCompanyInfo/{companyId}")
+    public Optional<Company> updateCompany(@PathVariable("companyId") Long companyId, @RequestBody Company newCompany) {
         return companyService.findCompanyById(companyId)
                 .map((company) -> {
                     company.setName(newCompany.getName());
@@ -42,9 +42,9 @@ public class CompanyController {
                     company.setWebsite(newCompany.getWebsite());
                     company.setDescription(newCompany.getDescription());
                     company.setPassword(newCompany.getPassword());
+                    company.setImageUrl(newCompany.getImageUrl());
                     companyService.saveCompanyToDb(company);
-                    return null;
+                    return company;
                 });
-
     }
 }

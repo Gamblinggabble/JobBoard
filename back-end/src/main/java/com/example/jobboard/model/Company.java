@@ -1,6 +1,7 @@
 package com.example.jobboard.model;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -28,8 +29,8 @@ public class Company {
 
     private String imageUrl;
 
-    @OneToMany(mappedBy = "company")
-    private Set<JobPost> jobPosts;
+    @OneToMany
+    private Set<JobPost> jobPosts = new HashSet<>();
 
     public Company() {
     }
