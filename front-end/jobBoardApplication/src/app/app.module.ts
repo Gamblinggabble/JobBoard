@@ -12,6 +12,8 @@ import { JobPostingListComponent } from './job-posting-list/job-posting-list.com
 import { JobPostingDetailsComponent } from './job-posting-details/job-posting-details.component';
 import { JobPostingsSearchComponent } from './job-postings-search/job-postings-search.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ApplyPageComponent } from './apply-page/apply-page.component';
+import { ApplyFormComponent } from './apply-form/apply-form.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { HttpClientModule } from '@angular/common/http';
     AboutPageComponent,
     JobPostingListComponent,
     JobPostingDetailsComponent,
-    JobPostingsSearchComponent
+    JobPostingsSearchComponent,
+    ApplyPageComponent,
+    ApplyFormComponent
   ],
   imports: [
     BrowserModule,
