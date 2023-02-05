@@ -1,10 +1,12 @@
 package com.example.jobboard.services;
 
 import com.example.jobboard.model.Company;
+import com.example.jobboard.model.JobPost;
 import com.example.jobboard.repos.CompanyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collection;
 import java.util.Optional;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -25,13 +27,17 @@ public class CompanyService {
         }
     }
 
-    public Company findCompanyById(Long id) {
+    public Optional<Company> findCompanyById(Long id) {
         Optional<Company> company = companyRepository.findCompanyById(id);
         if (company.isPresent())
-            return company.get();
+            return Optional.of(company.get());
         else {
             LOGGER.log(Level.WARNING, "Failed to find company in local DB for id: {}", id);
             return null;
         }
+    }
+
+    public Collection<Company> findAllCompanies() {
+        return companyRepository.findAll();
     }
 }
