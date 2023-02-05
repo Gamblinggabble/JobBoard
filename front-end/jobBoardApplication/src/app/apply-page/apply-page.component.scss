@@ -8,6 +8,24 @@ body{
     padding-top: 100px;
 }
 
+.jb-posting-panel--navigation{
+    text-decoration: none;
+    color: $jb-main-text-color;
+}
+
+.jb-posting-panel--navigation:hover{
+    animation: go-back-animation 0.2s ease-in-out forwards;
+}
+
+@keyframes go-back-animation {
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(-3px);
+    }
+}
+
 .jb-apply-page-container{
     display: flex;
     flex-direction: row;
