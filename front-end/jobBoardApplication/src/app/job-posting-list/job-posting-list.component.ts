@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { JobPost } from '../job-post';
 import { JobpostService } from '../jobpost-service.service';
 
@@ -11,6 +11,7 @@ import { JobpostService } from '../jobpost-service.service';
 export class JobPostingListComponent {
 
   jobposts: JobPost[] = [];
+  @Output() jobPostIdChanged: EventEmitter<number> = new EventEmitter<number>();
 
   constructor(private jobpostService: JobpostService) {}
 
@@ -19,5 +20,9 @@ export class JobPostingListComponent {
       this.jobposts = data
     )
   };
+
+  onJobItemClick(id: number): void {
+    this.jobPostIdChanged.emit(id);
+  }
 
 }

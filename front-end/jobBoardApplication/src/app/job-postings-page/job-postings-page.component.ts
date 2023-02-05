@@ -11,12 +11,16 @@ import { JobpostService } from '../jobpost-service.service';
 export class JobPostingsPageComponent {
 
   jobposts: JobPost[] = [];
+  jobPostId!: number;
 
   constructor(private jobpostService: JobpostService) {}
 
   ngOnInit(): void{
     this.jobpostService.findAll().subscribe(data =>
-      this.jobposts = data
+      {
+        this.jobposts = data;
+        this.jobPostId = this.jobposts[0]?.id;
+      }
     )
     //this.jobPostingsToggle();
   };
@@ -28,4 +32,8 @@ export class JobPostingsPageComponent {
   //   });
 
   // }
+
+  onJobPostIdChanged(id: number): void {
+    this.jobPostId = id;
+  }
 }
