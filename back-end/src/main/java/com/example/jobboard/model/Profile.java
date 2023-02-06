@@ -1,9 +1,7 @@
 package com.example.jobboard.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Profile {
@@ -19,6 +17,9 @@ public class Profile {
     private String email;
 
     private String password;
+
+//    @OneToMany(mappedBy = "profile")
+//    private Set<Application> applications;
 
     public Profile() {
     }
