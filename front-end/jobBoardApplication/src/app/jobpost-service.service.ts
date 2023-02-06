@@ -21,4 +21,16 @@ export class JobpostService {
   public findById(id: number): Observable<JobPost> {
     return this.http.get<JobPost>(this.jobpostsUrl + '/' + id);
   }
+
+  public addJobPost(jobpost: JobPost): void{
+    this.http.post<JobPost>(this.jobpostsUrl + "/add",jobpost)
+    .subscribe(
+      data => {
+        console.log("Jobpost added successfully", data);
+      },
+      error => {
+        console.error("Error adding jobpost", error);
+      }
+    ); 
+  }
 }

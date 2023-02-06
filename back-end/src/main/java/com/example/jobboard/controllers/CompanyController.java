@@ -10,27 +10,28 @@ import java.util.Optional;
 
 
 @RestController
+@RequestMapping("/companies")
 public class CompanyController {
 
     @Autowired
     private CompanyService companyService;
 
-    @GetMapping("/company/{id}")
+    @GetMapping("/{id}")
     public Optional<Company> getCompanyById(@PathVariable Long id){
         return companyService.findCompanyById(id);
     }
 
-    @GetMapping("/companies")
+    @GetMapping("/all")
     private Collection<Company> getAll(){
         return companyService.findAllCompanies();
     }
 
-    @PostMapping("/addCompany")
+    @PostMapping("/add")
     public void addCompany(@RequestBody Company company){
         companyService.saveCompanyToDb(company);
     }
 
-    @PutMapping("/updateCompanyInfo/{companyId}")
+    @PutMapping("/update/{companyId}")
     public Optional<Company> updateCompany(@PathVariable("companyId") Long companyId, @RequestBody Company newCompany) {
         return companyService.findCompanyById(companyId)
                 .map((company) -> {
