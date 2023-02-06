@@ -13,10 +13,14 @@ import { JobPostingDetailsComponent } from './job-posting-details/job-posting-de
 import { JobPostingsSearchComponent } from './job-postings-search/job-postings-search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ApplyPageComponent } from './apply-page/apply-page.component';
+import { ApplyPostingDetailsComponent } from './apply-posting-details/apply-posting-details.component';
 import { ApplyFormComponent } from './apply-form/apply-form.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegistrationPersonPageComponent } from './registration-person-page/registration-person-page.component';
 import { RegistrationCompanyPageComponent } from './registration-company-page/registration-company-page.component';
+import { PersonalProfileMenuPageComponent } from './personal-profile-menu-page/personal-profile-menu-page.component';
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
+import { AddJobPostComponent } from './add-job-post/add-job-post.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,12 @@ import { RegistrationCompanyPageComponent } from './registration-company-page/re
     ApplyFormComponent,
     LoginPageComponent,
     RegistrationPersonPageComponent,
-    RegistrationCompanyPageComponent
+    RegistrationCompanyPageComponent,
+    ApplyPostingDetailsComponent,
+    ApplyFormComponent,
+    PersonalProfileMenuPageComponent,
+    UpdateProfileComponent,
+    AddJobPostComponent
   ],
   imports: [
     BrowserModule,
