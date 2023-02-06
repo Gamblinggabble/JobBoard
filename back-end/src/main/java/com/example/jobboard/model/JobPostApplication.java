@@ -1,9 +1,16 @@
 package com.example.jobboard.model;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import javax.persistence.*;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 
 @Entity
 public class JobPostApplication {
+
+    private final String PATH = "D:\\Mains\\University\\05.InformaticsV\\project_JobBoard\\database\\cvs\\";
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,16 +31,19 @@ public class JobPostApplication {
 
     private boolean favoured;
 
+    private String cvFilePath;
+
     public JobPostApplication() {
     }
 
-    public JobPostApplication(Long applicationId, JobPost jobPost, String firstName, String lastName, String email, boolean favoured) {
-        this.id = applicationId;
+    public JobPostApplication(Long id, JobPost jobPost, String firstName, String lastName, String email, boolean favoured, MultipartFile cvFile) {
+        this.id = id;
         this.jobPost = jobPost;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.favoured = favoured;
+        this.cvFilePath = uploadImage(cvFile);
     }
 
     public Long getId() {
@@ -64,6 +74,10 @@ public class JobPostApplication {
         return favoured;
     }
 
+    public String getCvFilePath() {
+        return this.cvFilePath;
+    }
+
     public void setId(Long applicationId) {
         this.id = applicationId;
     }
@@ -90,5 +104,24 @@ public class JobPostApplication {
 
     public void setFavoured(boolean favoured) {
         this.favoured = favoured;
+    }
+
+    public void setCvFilePath(MultipartFile cvFile) {
+        this.cvFilePath = uploadImage(cvFile);
+    }
+
+    public String uploadImage(MultipartFile file) {
+        String fullPath = PATH+file.getOriginalFilename();
+        try {
+            file.transferTo(new File(fullPath));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return fullPath;
+    }
+
+    public byte[] downloadImage() throws IOException{
+        String fullPath = PATH + this.cvFilePath;
+        return Files.readAllBytes(new File(fullPath).toPath());
     }
 }

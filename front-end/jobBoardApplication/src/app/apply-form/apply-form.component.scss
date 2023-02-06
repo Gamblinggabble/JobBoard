@@ -126,6 +126,7 @@ $jb-accent-color-hover: #2b8265;
     font-weight: 500;
     font-size: 15px;
     cursor: pointer;
+    opacity: 0%;
   }
   
   .file-message {
@@ -135,6 +136,7 @@ $jb-accent-color-hover: #2b8265;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    opacity: 0%;
   }
   
   .file-input {
@@ -144,7 +146,7 @@ $jb-accent-color-hover: #2b8265;
     top: -26px;
     width: 100%;
     cursor: pointer;
-    opacity: 0;
+    opacity: 100%;
   }
   
   

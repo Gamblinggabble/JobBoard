@@ -25,7 +25,7 @@ public class JobPostApplicationController {
     }
 
     @PostMapping
-    public void save(JobPostApplication application) {
+    public void save(@RequestBody JobPostApplication application) {
         this.applicationService.save(application);
     }
 }

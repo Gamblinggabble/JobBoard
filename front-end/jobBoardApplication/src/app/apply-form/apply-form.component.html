@@ -5,20 +5,20 @@
                 <p class="jb-form--names--item--label">
                     Име
                 </p>
-                <input type="text" class="jb-form--text-input jb-text-input-name" placeholder="Въведете своето име">
+                <input type="text" #fname class="jb-form--text-input jb-text-input-name" placeholder="Въведете своето име">
             </div>
             <div class="jb-form--item">
                 <p class="jb-form--names--item--label">
                     Фамилия
                 </p>
-                <input type="text" class="jb-form--text-input" placeholder="Въведете своята фамилия">
+                <input type="text" #lname class="jb-form--text-input" placeholder="Въведете своята фамилия">
             </div>
         </div>
         <div class="jb-form--item">
             <p class="jb-form--names--item--label">
                 E-mail
             </p>
-            <input type="text" class="jb-form--text-input" placeholder="Въведете своя e-mail">
+            <input type="text" #email class="jb-form--text-input" placeholder="Въведете своя e-mail">
         </div>
         <div class="jb-form--item">
             <p class="jb-form--names--item--label">
@@ -32,11 +32,11 @@
                     <div class="jb-upload-manual">
                         <span class="choose-file-button">Изберете файлове</span>
                         <span class="file-message">или ги издърпайте тук</span>
-                        <input class="file-input" type="file" multiple>
+                        <input class="file-input" type="file" #fileUploads (change)="onFileSelected($event)">
                     </div>
                 </div>
             </div>
         </div>
-       <button class="jb-apply-button">Изпрати</button>
+       <button type="button" class="jb-apply-button" (click)="getValue(fname.value, lname.value, email.value)">Изпрати</button>
     </form>
 </div>
