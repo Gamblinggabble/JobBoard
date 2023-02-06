@@ -1,5 +1,5 @@
 export interface Company {
-    id: BigInteger;
+    id: number;
     name: string;
     email: string;
     phoneNumber: string;

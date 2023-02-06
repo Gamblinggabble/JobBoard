@@ -21,6 +21,7 @@ import { RegistrationCompanyPageComponent } from './registration-company-page/re
 import { PersonalProfileMenuPageComponent } from './personal-profile-menu-page/personal-profile-menu-page.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
 import { AddJobPostComponent } from './add-job-post/add-job-post.component';
+import { ProfileMenuComponent } from './profile-menu/profile-menu.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { AddJobPostComponent } from './add-job-post/add-job-post.component';
     ApplyFormComponent,
     PersonalProfileMenuPageComponent,
     UpdateProfileComponent,
-    AddJobPostComponent
+    AddJobPostComponent,
+    ProfileMenuComponent
   ],
   imports: [
     BrowserModule,

@@ -15,6 +15,8 @@ public class JobPost {
     @ManyToOne
     private Company company;
 
+    private String city;
+
     private LocalDate date;
 
     private String description;
@@ -22,11 +24,12 @@ public class JobPost {
     public JobPost() {
     }
 
-    public JobPost(String title, Company company, LocalDate date, String description) {
+    public JobPost(String title, Company company, LocalDate date, String description, String city) {
         this.title = title;
         this.company = company;
         this.date = date;
         this.description = description;
+        this.city = city;
     }
 
     public Long getId() {
@@ -67,5 +70,13 @@ public class JobPost {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 }

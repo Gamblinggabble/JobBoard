@@ -1,7 +1,6 @@
 package com.example.jobboard.services;
 
 import com.example.jobboard.model.Company;
-import com.example.jobboard.model.JobPost;
 import com.example.jobboard.repos.CompanyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -44,8 +44,8 @@ public class ProfileController {
 
     }
 
-//    @PatchMapping("/changePassword/{profileId}")
-//    public Optional<Profile> changePassword(@PathVariable("profileId") Long profileId){
-//
-//    }
+ /*   @PatchMapping("/changePassword/{profileId}")
+    public Optional<Profile> changePassword(@PathVariable("profileId") Long profileId ){
+
+    }*/
 }

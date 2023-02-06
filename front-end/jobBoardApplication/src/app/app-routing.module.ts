@@ -23,7 +23,7 @@ const routes: Routes = [
   {path: 'registration-company-page-component', component: RegistrationCompanyPageComponent},
   {path: 'app-personal-profile-menu-page', component: PersonalProfileMenuPageComponent},
   {path: 'update-personal-profile-page', component: UpdateProfileComponent},
-  {path: 'create-job-post', component: AddJobPostComponent}
+  {path: 'add-job-post-page', component: AddJobPostComponent}
 ];
 
 @NgModule({
