@@ -20,7 +20,6 @@ import { RegistrationPersonPageComponent } from './registration-person-page/regi
 import { RegistrationCompanyPageComponent } from './registration-company-page/registration-company-page.component';
 import { PersonalProfileMenuPageComponent } from './personal-profile-menu-page/personal-profile-menu-page.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
-import { AddJobPostComponent } from './add-job-post/add-job-post.component';
 
 @NgModule({
   declarations: [
@@ -40,8 +39,7 @@ import { AddJobPostComponent } from './add-job-post/add-job-post.component';
     ApplyPostingDetailsComponent,
     ApplyFormComponent,
     PersonalProfileMenuPageComponent,
-    UpdateProfileComponent,
-    AddJobPostComponent
+    UpdateProfileComponent
   ],
   imports: [
     BrowserModule,

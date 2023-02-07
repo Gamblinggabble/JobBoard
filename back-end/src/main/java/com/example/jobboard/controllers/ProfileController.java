@@ -25,6 +25,11 @@ public class ProfileController {
         return profileService.findAllProfiles();
     }
 
+    @GetMapping("/byEmail/{email}")
+    public Optional<Profile> getProfileByEmail(@PathVariable String email){
+        return profileService.findProfileByEmail(email);
+    }
+
     @PostMapping("/add")
     public void addProfile(@RequestBody Profile profile){
         profileService.saveProfileToDb(profile);

@@ -22,6 +22,10 @@ export class ProfileService {
     return this.http.get<Profile>(this.profilesUrl + '/' + id);
   }
 
+  public findByEmail(email: string): Observable<Profile> {
+    return this.http.get<Profile>(this.profilesUrl + '/byEmail/' + email);
+  }
+
   public addProfile(profile: Profile): void {
     this.http.post<Profile>(this.profilesUrl + "/add", profile)
     .subscribe(

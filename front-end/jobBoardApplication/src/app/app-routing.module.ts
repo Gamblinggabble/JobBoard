@@ -10,7 +10,6 @@ import { RegistrationCompanyPageComponent } from './registration-company-page/re
 import { ApplyPageComponent } from './apply-page/apply-page.component';
 import { PersonalProfileMenuPageComponent } from './personal-profile-menu-page/personal-profile-menu-page.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
-import { AddJobPostComponent } from './add-job-post/add-job-post.component';
 
 const routes: Routes = [
   {path: 'home-page-component', component: HomePageComponent},
@@ -22,8 +21,7 @@ const routes: Routes = [
   {path: 'registration-person-page-component', component: RegistrationPersonPageComponent},
   {path: 'registration-company-page-component', component: RegistrationCompanyPageComponent},
   {path: 'app-personal-profile-menu-page', component: PersonalProfileMenuPageComponent},
-  {path: 'update-personal-profile-page', component: UpdateProfileComponent},
-  {path: 'create-job-post', component: AddJobPostComponent}
+  {path: 'update-personal-profile-page', component: UpdateProfileComponent}
 ];
 
 @NgModule({

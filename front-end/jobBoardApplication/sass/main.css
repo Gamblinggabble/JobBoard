@@ -3734,7 +3734,7 @@ textarea.form-control-lg {
 .nav-pills {
   --bs-nav-pills-border-radius: 0.375rem;
   --bs-nav-pills-link-active-color: #fff;
-  --bs-nav-pills-link-active-bg: #57b78a;
+  --bs-nav-pills-link-active-bg: #9f9f9f;
 }
 .nav-pills .nav-link {
   background: none;
@@ -10932,4 +10932,19 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+.btn-primary {
+  background-color: #35A17D !important;
+  border: none;
+}
+
+.navbar-brand {
+  color: #35A17D;
+  font-weight: 900;
+  font-size: 35px;
+  line-height: 59px;
+}
+
+.navbar {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }/*# sourceMappingURL=main.css.map */
