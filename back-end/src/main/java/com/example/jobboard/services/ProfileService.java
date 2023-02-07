@@ -13,31 +13,16 @@ import java.util.logging.Logger;
 @Service
 public class ProfileService {
 
-        @Autowired
-        private ProfileRepository profileRepository;
-        private final static Logger LOGGER =
-                Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+    @Autowired
+    private ProfileRepository profileRepository;
+    private final static Logger LOGGER =
+            Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
-        public void saveProfileToDb(Profile profile) {
-            try {
-                profileRepository.saveAndFlush(profile);
-            } catch (Exception e) {
-                LOGGER.log(Level.SEVERE, "Profile {} could not be saved in Database", profile.getFirstName() + profile.getLastName());
-            }
-        }
-
-        public Optional<Profile> findProfileById(Long id) {
-            Optional<Profile> profile = profileRepository.findProfileById(id);
-            if (profile.isPresent())
-                return Optional.of(profile.get());
-            else {
-                LOGGER.log(Level.WARNING, "Failed to find profile in local DB for id: {}", id);
-                return null;
-            }
-        }
-
-        public Collection<Profile> findAllProfiles() {
-            return profileRepository.findAll();
+    public void saveProfileToDb(Profile profile) {
+        try {
+            profileRepository.saveAndFlush(profile);
+        } catch (Exception e) {
+            LOGGER.log(Level.SEVERE, "Profile {} could not be saved in Database", profile.getFirstName() + profile.getLastName());
         }
 
     public Optional<Profile> findProfileByEmail(String email) {
@@ -50,5 +35,31 @@ public class ProfileService {
         }
     }
     }
+
+    public Optional<Profile> findProfileById(Long id) {
+        Optional<Profile> profile = profileRepository.findProfileById(id);
+        if (profile.isPresent())
+            return Optional.of(profile.get());
+        else {
+            LOGGER.log(Level.WARNING, "Failed to find profile in local DB for id: {}", id);
+            return null;
+        }
+    }
+
+    public Collection<Profile> findAllProfiles() {
+        return profileRepository.findAll();
+    }
+
+    public Optional<Profile> findProfileByEmail(String email) {
+        Optional<Profile> profile = profileRepository.findProfileByEmail(email);
+        if (profile.isPresent())
+            return Optional.of(profile.get());
+        else {
+            LOGGER.log(Level.WARNING, "Failed to find profile in local DB for email: {}", email);
+            return null;
+        }
+    }
+
+}
 
 
