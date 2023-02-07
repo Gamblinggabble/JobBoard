@@ -15,6 +15,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { ApplyPageComponent } from './apply-page/apply-page.component';
 import { ApplyPostingDetailsComponent } from './apply-posting-details/apply-posting-details.component';
 import { ApplyFormComponent } from './apply-form/apply-form.component';
+import { ApplySuccessPageComponent } from './apply-success-page/apply-success-page.component';
+import { CreatePostingSuccessPageComponent } from './create-posting-success-page/create-posting-success-page.component';
+import { UpdateProfileSuccessPageComponent } from './update-profile-success-page/update-profile-success-page.component';
+import { ChangePasswordSuccessPageComponent } from './change-password-success-page/change-password-success-page.component';
+import { SuccessMessageComponent } from './success-message/success-message.component';
+import { PostingCandidatesPageComponent } from './posting-candidates-page/posting-candidates-page.component';
+import { PostingCandidateItemComponent } from './posting-candidate-item/posting-candidate-item.component';
+import { NoActivePostingsComponent } from './no-active-postings/no-active-postings.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +36,15 @@ import { ApplyFormComponent } from './apply-form/apply-form.component';
     JobPostingsSearchComponent,
     ApplyPageComponent,
     ApplyPostingDetailsComponent,
-    ApplyFormComponent
+    ApplyFormComponent,
+    ApplySuccessPageComponent,
+    CreatePostingSuccessPageComponent,
+    UpdateProfileSuccessPageComponent,
+    ChangePasswordSuccessPageComponent,
+    SuccessMessageComponent,
+    PostingCandidatesPageComponent,
+    PostingCandidateItemComponent,
+    NoActivePostingsComponent
   ],
   imports: [
     BrowserModule,
