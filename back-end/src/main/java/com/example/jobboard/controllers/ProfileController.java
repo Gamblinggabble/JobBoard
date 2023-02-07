@@ -9,27 +9,33 @@ import java.util.Collection;
 import java.util.Optional;
 
 @RestController
+@RequestMapping("/profiles")
 public class ProfileController {
 
     @Autowired
     private ProfileService profileService;
 
-    @GetMapping("/profile/{id}")
+    @GetMapping("/{id}")
     public Optional<Profile> getProfileById(@PathVariable Long id){
         return profileService.findProfileById(id);
     }
 
-    @GetMapping("/profiles")
+    @GetMapping("/all")
     private Collection<Profile> getAll(){
         return profileService.findAllProfiles();
     }
 
-    @PostMapping("/addProfile")
+    @GetMapping("/byEmail/{email}")
+    public Optional<Profile> getProfileByEmail(@PathVariable String email){
+        return profileService.findProfileByEmail(email);
+    }
+
+    @PostMapping("/add")
     public void addProfile(@RequestBody Profile profile){
         profileService.saveProfileToDb(profile);
     }
 
-    @PutMapping("/updateProfileInfo/{profileId}")
+    @PutMapping("/update/{profileId}")
     public Optional<Profile> updateProfile(@PathVariable("profileId") Long profileId, @RequestBody Profile newProfile) {
         return profileService.findProfileById(profileId)
                 .map((profile) -> {
@@ -42,4 +48,11 @@ public class ProfileController {
                 });
 
     }
+
+
+
+ /*   @PatchMapping("/changePassword/{profileId}")
+    public Optional<Profile> changePassword(@PathVariable("profileId") Long profileId ){
+
+    }*/
 }

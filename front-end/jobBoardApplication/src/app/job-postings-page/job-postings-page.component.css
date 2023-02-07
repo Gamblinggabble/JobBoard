@@ -1,0 +1,22 @@
+body {
+  background-color: #F6FFFC;
+}
+
+.jb-job-postings-container {
+  display: grid;
+  grid-template-areas: "search search search" "jblist jblist descr";
+}
+
+.jb-job-postings-search-app {
+  grid-area: search;
+}
+
+.jb-job-posting-list-item-app {
+  grid-area: jblist;
+  width: auto;
+}
+
+.jb-job-posting-details-app {
+  grid-area: descr;
+  width: auto;
+}/*# sourceMappingURL=job-postings-page.component.css.map */

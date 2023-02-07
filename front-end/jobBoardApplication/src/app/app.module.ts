@@ -23,6 +23,13 @@ import { SuccessMessageComponent } from './success-message/success-message.compo
 import { PostingCandidatesPageComponent } from './posting-candidates-page/posting-candidates-page.component';
 import { PostingCandidateItemComponent } from './posting-candidate-item/posting-candidate-item.component';
 import { NoActivePostingsComponent } from './no-active-postings/no-active-postings.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { RegistrationPersonPageComponent } from './registration-person-page/registration-person-page.component';
+import { RegistrationCompanyPageComponent } from './registration-company-page/registration-company-page.component';
+import { PersonalProfileMenuPageComponent } from './personal-profile-menu-page/personal-profile-menu-page.component';
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
+import { AddJobPostComponent } from './add-job-post/add-job-post.component';
+import { ProfileMenuComponent } from './profile-menu/profile-menu.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +42,10 @@ import { NoActivePostingsComponent } from './no-active-postings/no-active-postin
     JobPostingDetailsComponent,
     JobPostingsSearchComponent,
     ApplyPageComponent,
+    ApplyFormComponent,
+    LoginPageComponent,
+    RegistrationPersonPageComponent,
+    RegistrationCompanyPageComponent,
     ApplyPostingDetailsComponent,
     ApplyFormComponent,
     ApplySuccessPageComponent,
@@ -44,7 +55,11 @@ import { NoActivePostingsComponent } from './no-active-postings/no-active-postin
     SuccessMessageComponent,
     PostingCandidatesPageComponent,
     PostingCandidateItemComponent,
-    NoActivePostingsComponent
+    NoActivePostingsComponent,
+    PersonalProfileMenuPageComponent,
+    UpdateProfileComponent,
+    AddJobPostComponent,
+    ProfileMenuComponent
   ],
   imports: [
     BrowserModule,
