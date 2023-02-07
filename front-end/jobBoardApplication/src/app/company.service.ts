@@ -8,22 +8,22 @@ import { Company } from './company';
 })
 export class CompanyService {
 
-private companyUrl: string;
+  private companiesUrl: string;
 
   constructor(private http: HttpClient) { 
-    this.companyUrl = 'http://localhost:4200/api/companies';
+    this.companiesUrl = 'http://localhost:4200/api/companies';
   }
 
   public findAll(): Observable<Company[]> {
-    return this.http.get<Company[]>(this.companyUrl);
+    return this.http.get<Company[]>(this.companiesUrl);
   }
 
   public findById(id: number): Observable<Company> {
-    return this.http.get<Company>(this.companyUrl + '/' + id);
+    return this.http.get<Company>(this.companiesUrl + '/' + id);
   }
 
-  public addCompany(Company: Company): void{
-    this.http.post<Company>(this.companyUrl + "/add",Company)
+  public addCompany(Company: Company): void {
+    this.http.post<Company>(this.companiesUrl + "/add", Company)
     .subscribe(
       data => {
         console.log("Company added successfully", data);
@@ -31,8 +31,6 @@ private companyUrl: string;
       error => {
         console.error("Error adding Company", error);
       }
-    ); 
-  }
-
+    );  }
 
  }

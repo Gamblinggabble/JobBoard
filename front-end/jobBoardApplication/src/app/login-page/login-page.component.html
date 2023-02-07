@@ -12,10 +12,10 @@
             </div>
         
             <label class="jb-login-form-label">Имейл</label>
-            <input type="email" class="jb-login-form-text-input" placeholder="Въведете имейла">
+            <input type="email" class="jb-login-form-text-input" #email placeholder="Въведете имейла">
             <label class="jb-login-form-label">Парола</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Въведете парола">
-            <button class="jb-login-panel-button">ВЛЕЗ</button>
+            <input type="password" class="form-control" id="exampleInputPassword1" #password placeholder="Въведете парола">
+            <button class="jb-login-panel-button"(click) = "getVal(email.value,password.value)">ВЛЕЗ</button>
         </div>
         <div class="jb-login-form-container--register">
                 <a href="" class="jb-register-text">
@@ -30,5 +30,7 @@
     </div>
 
    
-</div>\
+</div>
+<!-- <p>{{ login.email }}</p>
+<p>{{ login.password }}</p> -->
 </body>

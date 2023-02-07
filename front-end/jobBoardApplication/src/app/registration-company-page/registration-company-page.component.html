@@ -5,29 +5,29 @@
         <h1 class="jb-registration-company-form-container--header">Регистрация</h1>
         <div class="jb-registration-company-form-container--panel">
         <label class="jb-registration-company-form-label">Име</label>
-        <input type="text" class="jb-registration-company-form-text-input" placeholder="Въведете име">
+        <input type="text" class="jb-registration-company-form-text-input" #CName placeholder="Въведете име">
         <label class="jb-registration-company-form-label">Лого</label>
-        <input type="text" class="jb-registration-company-form-text-input" placeholder="Постави URL адрес...">
+        <input type="text" class="jb-registration-company-form-text-input" #logo placeholder="Постави URL адрес...">
         <label class="jb-registration-company-form-label">Имейл</label>
-        <input type="email" class="jb-registration-company-form-text-input" placeholder="Въведете имейла">
+        <input type="email" class="jb-registration-company-form-text-input" #email placeholder="Въведете имейла">
         <label class="jb-registration-company-form-label">Парола</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Въведете парола">
+        <input type="password" class="form-control" id="exampleInputPassword1" #password placeholder="Въведете парола">
         <label class="jb-registration-company-form-label">Телефон</label>
-        <input type="tel" class="jb-registration-company-form-text-input" placeholder="Въведете телефон">
+        <input type="tel" class="jb-registration-company-form-text-input" #tel placeholder="Въведете телефон">
         <label class="jb-registration-company-form-label">Град</label>
-        <select name="city" id="city-select" class="jb-registration-company-form-text-input">
-            <option value="">Град</option>
-            <option value="">София</option>
-            <option value="">Бургас</option>
-            <option value="">Варна</option>
+        <select name="city" #city id="city-select" class="jb-registration-company-form-text-input">
+            <option>Град</option>
+            <option>София</option>
+            <option>Бургас</option>
+            <option>Варна</option>
         </select>
         <label class="jb-registration-company-form-label">Адрес</label>
-        <input type="text" class="jb-registration-company-form-text-input" placeholder="Въведете адрес">
+        <input type="text" class="jb-registration-company-form-text-input" #address placeholder="Въведете адрес">
         <label class="jb-registration-company-form-label">Уебсайт</label>
-        <input type="text" class="jb-registration-company-form-text-input" placeholder="Въведете уебсайт">
+        <input type="text" class="jb-registration-company-form-text-input" #website placeholder="Въведете уебсайт">
         <label class="jb-registration-company-form-label">Описание</label>
-        <textarea class="text-area" id="story" name="story">Въведете описание</textarea>
-        <button class="jb-registration-company-panel-button">РЕГИСТРАЦИЯ</button>
+        <textarea class="text-area" id="story" name="story" #opisanie >Въведете описание</textarea>
+        <button class="jb-registration-company-panel-button" (click) = "getVal(CName.value,logo.value,email.value,password.value,tel.value,city.value,address.value,website.value,opisanie.value)">РЕГИСТРАЦИЯ</button>
     </div>
 </div>
     <div class="jb-registration-company-image-container">
@@ -35,3 +35,6 @@
     </div>
 </div>
 </body>
+
+<p>{{ company.name }}</p>
+<p>{{ company.city }}</p>

@@ -28,7 +28,6 @@ import { RegistrationPersonPageComponent } from './registration-person-page/regi
 import { RegistrationCompanyPageComponent } from './registration-company-page/registration-company-page.component';
 import { PersonalProfileMenuPageComponent } from './personal-profile-menu-page/personal-profile-menu-page.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
-import { AddJobPostComponent } from './add-job-post/add-job-post.component';
 import { ProfileMenuComponent } from './profile-menu/profile-menu.component';
 
 @NgModule({
@@ -58,7 +57,6 @@ import { ProfileMenuComponent } from './profile-menu/profile-menu.component';
     NoActivePostingsComponent,
     PersonalProfileMenuPageComponent,
     UpdateProfileComponent,
-    AddJobPostComponent,
     ProfileMenuComponent
   ],
   imports: [
