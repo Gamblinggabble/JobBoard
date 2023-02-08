@@ -26,9 +26,11 @@ import { NoActivePostingsComponent } from './no-active-postings/no-active-postin
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegistrationPersonPageComponent } from './registration-person-page/registration-person-page.component';
 import { RegistrationCompanyPageComponent } from './registration-company-page/registration-company-page.component';
-import { PersonalProfileMenuPageComponent } from './personal-profile-menu-page/personal-profile-menu-page.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
 import { ProfileMenuComponent } from './profile-menu/profile-menu.component';
+import { CompanyProfileMenuComponent } from './company-profile-menu/company-profile-menu.component';
+import { UserProfileMenuComponent } from './user-profile-menu/user-profile-menu.component';
+import { AddJobPostComponent } from './add-job-post/add-job-post.component';
 
 @NgModule({
   declarations: [
@@ -55,9 +57,13 @@ import { ProfileMenuComponent } from './profile-menu/profile-menu.component';
     PostingCandidatesPageComponent,
     PostingCandidateItemComponent,
     NoActivePostingsComponent,
-    PersonalProfileMenuPageComponent,
     UpdateProfileComponent,
-    ProfileMenuComponent
+    ProfileMenuComponent,
+    UpdateProfileComponent,
+    AddJobPostComponent,
+    ProfileMenuComponent,
+    CompanyProfileMenuComponent,
+    UserProfileMenuComponent
   ],
   imports: [
     BrowserModule,

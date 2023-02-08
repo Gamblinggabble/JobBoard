@@ -14,8 +14,10 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { RegistrationPersonPageComponent } from './registration-person-page/registration-person-page.component';
 import { RegistrationCompanyPageComponent } from './registration-company-page/registration-company-page.component';
 import { ApplyPageComponent } from './apply-page/apply-page.component';
-import { PersonalProfileMenuPageComponent } from './personal-profile-menu-page/personal-profile-menu-page.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
+import { AddJobPostComponent } from './add-job-post/add-job-post.component';
+import { CompanyProfileMenuComponent } from './company-profile-menu/company-profile-menu.component';
+import { UserProfileMenuComponent } from './user-profile-menu/user-profile-menu.component';
 
 const routes: Routes = [
   {path: 'home-page-component', component: HomePageComponent},
@@ -32,8 +34,10 @@ const routes: Routes = [
   {path: 'login-page-component', component: LoginPageComponent},
   {path: 'registration-person-page-component', component: RegistrationPersonPageComponent},
   {path: 'registration-company-page-component', component: RegistrationCompanyPageComponent},
-  {path: 'app-personal-profile-menu-page', component: PersonalProfileMenuPageComponent},
-  {path: 'update-personal-profile-page', component: UpdateProfileComponent}
+  {path: 'update-personal-profile-page', component: UpdateProfileComponent},
+  {path: 'add-job-post-page', component: AddJobPostComponent},
+  {path: 'company-profile-menu', component: CompanyProfileMenuComponent},
+  {path: 'user-profile-menu', component: UserProfileMenuComponent}
 ];
 
 @NgModule({

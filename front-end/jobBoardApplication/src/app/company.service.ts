@@ -18,7 +18,7 @@ export class CompanyService {
     return this.http.get<Company[]>(this.companiesUrl);
   }
 
-  public findById(id: number): Observable<Company> {
+  public async findById(id: number): Promise<Observable<Company>> {
     return this.http.get<Company>(this.companiesUrl + '/' + id);
   }
 
