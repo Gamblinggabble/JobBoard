@@ -31,6 +31,9 @@ import { ProfileMenuComponent } from './profile-menu/profile-menu.component';
 import { CompanyProfileMenuComponent } from './company-profile-menu/company-profile-menu.component';
 import { UserProfileMenuComponent } from './user-profile-menu/user-profile-menu.component';
 import { AddJobPostComponent } from './add-job-post/add-job-post.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
+import { UpdateCompanyProfileComponent } from './update-company-profile/update-company-profile.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -63,7 +66,9 @@ import { AddJobPostComponent } from './add-job-post/add-job-post.component';
     AddJobPostComponent,
     ProfileMenuComponent,
     CompanyProfileMenuComponent,
-    UserProfileMenuComponent
+    UserProfileMenuComponent,
+    ChangePasswordComponent,
+    UpdateCompanyProfileComponent
   ],
   imports: [
     BrowserModule,

@@ -24,6 +24,7 @@ public class ProfileService {
         } catch (Exception e) {
             LOGGER.log(Level.SEVERE, "Profile {} could not be saved in Database", profile.getFirstName() + profile.getLastName());
         }
+    }
 
     public Optional<Profile> findProfileByEmail(String email) {
         Optional<Profile> profile = profileRepository.findProfileByEmail(email);
@@ -33,7 +34,6 @@ public class ProfileService {
             LOGGER.log(Level.WARNING, "Failed to find profile in local DB for email: {}", email);
             return null;
         }
-    }
     }
 
     public Optional<Profile> findProfileById(Long id) {
@@ -48,16 +48,6 @@ public class ProfileService {
 
     public Collection<Profile> findAllProfiles() {
         return profileRepository.findAll();
-    }
-
-    public Optional<Profile> findProfileByEmail(String email) {
-        Optional<Profile> profile = profileRepository.findProfileByEmail(email);
-        if (profile.isPresent())
-            return Optional.of(profile.get());
-        else {
-            LOGGER.log(Level.WARNING, "Failed to find profile in local DB for email: {}", email);
-            return null;
-        }
     }
 
 }

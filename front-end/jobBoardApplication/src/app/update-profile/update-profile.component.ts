@@ -9,29 +9,24 @@ import { ProfileService } from '../profile.service';
 })
 export class UpdateProfileComponent {
 
-constructor(private profileService: ProfileService){} 
+  constructor(private profileService: ProfileService) { }
 
-profile1 = {
-    id: 12,
-    firstName: " ",
-    lastName: " ",
-    email: " ",
-    password: " "
-    };
+  profile!: Profile;
 
-getVal(fName:string,lName:string,email:string)
-  {
+  getVal(fName: string, lName: string, email: string) {
 
-      this.profile1 = {
-      id: 12,
+    this.profileService.findById(1).subscribe(data => this.profile = data);
+
+    this.profile = {
+      id: this.profile.id,
       firstName: fName,
       lastName: lName,
       email: email,
-      password: " "
-      };
+      password: this.profile.password
+    };
 
-      this.profileService.addProfile(this.profile1);
-  
+    this.profileService.updateProfile(this.profile.id, this.profile);
+
   }
 
 }

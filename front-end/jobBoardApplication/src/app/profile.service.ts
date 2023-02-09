@@ -37,5 +37,17 @@ export class ProfileService {
       }
     );  }
 
+  public updateProfile(id: number, profile: Profile): void {
+    this.http.put<Profile>(this.profilesUrl + "/update/" + id, profile)
+    .subscribe(
+      data => {
+        console.log("Profile updated successfully", data);
+      },
+      error => {
+        console.error("Error updating profile", error);
+      }
+    );
+  }
+
   
 }

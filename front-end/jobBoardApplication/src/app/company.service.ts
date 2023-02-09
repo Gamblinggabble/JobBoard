@@ -18,7 +18,7 @@ export class CompanyService {
     return this.http.get<Company[]>(this.companiesUrl);
   }
 
-  public async findById(id: number): Promise<Observable<Company>> {
+  public findById(id: number): Observable<Company> {
     return this.http.get<Company>(this.companiesUrl + '/' + id);
   }
 
@@ -31,6 +31,19 @@ export class CompanyService {
       error => {
         console.error("Error adding Company", error);
       }
-    );  }
+    );  
+  }
 
+    public updateCompany(id: number, company: Company): void {
+      this.http.put<Company>(this.companiesUrl + "/update/" + id, company)
+      .subscribe(
+        data => {
+          console.log("Company updated successfully", data);
+        },
+        error => {
+          console.error("Error updating company", error);
+        }
+      );
+    }
+    
  }

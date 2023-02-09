@@ -18,6 +18,8 @@ import { UpdateProfileComponent } from './update-profile/update-profile.componen
 import { AddJobPostComponent } from './add-job-post/add-job-post.component';
 import { CompanyProfileMenuComponent } from './company-profile-menu/company-profile-menu.component';
 import { UserProfileMenuComponent } from './user-profile-menu/user-profile-menu.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
+import { UpdateCompanyProfileComponent } from './update-company-profile/update-company-profile.component';
 
 const routes: Routes = [
   {path: 'home-page-component', component: HomePageComponent},
@@ -37,7 +39,9 @@ const routes: Routes = [
   {path: 'update-personal-profile-page', component: UpdateProfileComponent},
   {path: 'add-job-post-page', component: AddJobPostComponent},
   {path: 'company-profile-menu', component: CompanyProfileMenuComponent},
-  {path: 'user-profile-menu', component: UserProfileMenuComponent}
+  {path: 'user-profile-menu', component: UserProfileMenuComponent},
+  {path: 'change-password-page', component: ChangePasswordComponent},
+  {path: 'update-company-profile-page', component: UpdateCompanyProfileComponent}
 ];
 
 @NgModule({
