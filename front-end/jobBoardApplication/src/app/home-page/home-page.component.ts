@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoginPageComponent } from '../login-page/login-page.component';
 
 @Component({
   selector: 'app-home-page',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class HomePageComponent {
 
+  getId(): number {
+     return LoginPageComponent.getID();
+  }
 }

@@ -40,4 +40,8 @@ export class LoginPageComponent {
       return this.ID;
     }
 
+    static setIDToMinusOne():void {
+        this.ID = -1;
+    }
+
 }
