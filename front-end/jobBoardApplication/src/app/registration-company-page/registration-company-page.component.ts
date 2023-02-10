@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { CompanyService } from '../company.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { CompanyService } from '../company.service';
   styleUrls: ['./registration-company-page.component.scss']
 })
 export class RegistrationCompanyPageComponent {
-  constructor(private companyService: CompanyService){} 
+  constructor(private companyService: CompanyService, private myRouter: Router){} 
 
   company = {
       id: 12,
@@ -39,6 +40,7 @@ export class RegistrationCompanyPageComponent {
         };
   
         this.companyService.addCompany(this.company);
+        this.myRouter.navigateByUrl('home-page-component');
   
     }
 }
