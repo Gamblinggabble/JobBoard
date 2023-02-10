@@ -39,4 +39,14 @@ public class CompanyService {
     public Collection<Company> findAllCompanies() {
         return companyRepository.findAll();
     }
+
+    public Optional<Company> findCompanyByEmail(String email) {
+        Optional<Company> company = companyRepository.findCompanyByEmail(email);
+        if (company.isPresent())
+            return Optional.of(company.get());
+        else {
+            LOGGER.log(Level.WARNING, "Failed to find company in local DB for email: {}", email);
+            return null;
+        }
+    }
 }

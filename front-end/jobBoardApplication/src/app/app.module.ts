@@ -38,6 +38,7 @@ import { CompanyJobPostsDetailsComponent } from './company-job-posts-details/com
 import { CompanyJobPostsListComponent } from './company-job-posts-list/company-job-posts-list.component';
 import { CompanyJobPostsPageComponent } from './company-job-posts-page/company-job-posts-page.component';
 import { CompaniesListItemComponent } from './companies-list-item/companies-list-item.component';
+import { LoginCompanyPageComponent } from './login-company-page/login-company-page.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +77,8 @@ import { CompaniesListItemComponent } from './companies-list-item/companies-list
     CompanyJobPostsDetailsComponent,
     CompanyJobPostsListComponent,
     CompanyJobPostsPageComponent,
-    CompaniesListItemComponent
+    CompaniesListItemComponent,
+    LoginCompanyPageComponent
   ],
   imports: [
     BrowserModule,
