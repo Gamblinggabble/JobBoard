@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges, Input, AfterViewInit, AfterContentInit, AfterContentChecked } from '@angular/core';
 import { LoginPageComponent } from './login-page/login-page.component';
 
 @Component({
@@ -6,8 +6,9 @@ import { LoginPageComponent } from './login-page/login-page.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements AfterContentChecked {
   title = 'jobBoardApplication';
+  @Input() isLoggedIn = false;
 
   constructor() { }
 
@@ -15,7 +16,16 @@ export class AppComponent {
     LoginPageComponent.setIDToMinusOne();
   }
 
-  ngOnInit() {
-    
+  ngAfterContentChecked() {
+    console.log("ngafterviewinit is fired");
+    if(LoginPageComponent.getID() != null) {
+      console.log("login page component is not null");
+       this.isLoggedIn = true; 
+    } else{
+    console.log("login page component is null");
+    }
   }
+
+  
+   
 }

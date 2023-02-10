@@ -14,3 +14,7 @@
 .container-fluid {
     position: relative;
 }
+
+.in-active {
+ display: none;
+}
