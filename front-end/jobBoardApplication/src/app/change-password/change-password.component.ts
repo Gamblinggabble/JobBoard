@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Profile } from '../profile';
 import { ProfileService } from '../profile.service';
 
@@ -9,20 +10,24 @@ import { ProfileService } from '../profile.service';
 })
 export class ChangePasswordComponent {
 
-  constructor(private profileService: ProfileService) { }
+  constructor(private profileService: ProfileService, private myRouter: Router) { }
 
   profile!: Profile;
 
   getVal(currentP: string, newP: string, newP_2: string) {
-    this.profileService.findById(2).subscribe(data => this.profile = data);
+    this.profileService.findById(4).subscribe(data => {
+      this.profile = data
 
-    if (newP == newP_2 && this.profile.password == currentP && newP != currentP) {
-      this.profile.password = newP;
-    } else {
+      if (newP == newP_2 && this.profile.password == currentP && newP != currentP) {
+        this.profile.password = newP;
+        this.myRouter.navigateByUrl('change-password-success-page-component');
+      } else {
 
-    }
+      }
 
-    this.profileService.updateProfile(1, this.profile);
+      this.profileService.updateProfile(4, this.profile);
+      this.myRouter.navigateByUrl('change-password-success-page-component');
+    });
 
   }
 }

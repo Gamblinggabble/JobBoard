@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -33,12 +32,13 @@ import { UserProfileMenuComponent } from './user-profile-menu/user-profile-menu.
 import { AddJobPostComponent } from './add-job-post/add-job-post.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { UpdateCompanyProfileComponent } from './update-company-profile/update-company-profile.component';
-import { RouterModule } from '@angular/router';
 import { CompanyJobPostsDetailsComponent } from './company-job-posts-details/company-job-posts-details.component';
 import { CompanyJobPostsListComponent } from './company-job-posts-list/company-job-posts-list.component';
 import { CompanyJobPostsPageComponent } from './company-job-posts-page/company-job-posts-page.component';
 import { CompaniesListItemComponent } from './companies-list-item/companies-list-item.component';
 import { LoginCompanyPageComponent } from './login-company-page/login-company-page.component';
+import { ChangeCompanyPasswordComponent } from './change-company-password/change-company-password.component';
+import { CompanyJobPostListingPageComponent } from './company-job-post-listing-page/company-job-post-listing-page.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +78,10 @@ import { LoginCompanyPageComponent } from './login-company-page/login-company-pa
     CompanyJobPostsListComponent,
     CompanyJobPostsPageComponent,
     CompaniesListItemComponent,
-    LoginCompanyPageComponent
+    LoginCompanyPageComponent,
+    ChangeCompanyPasswordComponent,
+    CompanyJobPostListingPageComponent
+ 
   ],
   imports: [
     BrowserModule,

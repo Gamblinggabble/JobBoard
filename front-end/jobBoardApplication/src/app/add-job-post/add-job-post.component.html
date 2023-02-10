@@ -1,31 +1,29 @@
-<div id = "title">
+<body>
+    <div id="title">
         Създаване на обява
-        </div>
+    </div>
 
-        <div class = "modal">
+    <div class="modal">
 
-            <span class = "label">Име</span> <br>
-            <input type="text" #name id="text">
-            <br>
+        <span class="label">Име</span> <br>
+        <input type="text" #name id="text">
+        <br>
 
-            <span class = "label">Град</span> <br>
-            <select  id="city" #city name = "city">
+        <span class="label">Град</span> <br>
+        <select id="city" #city name="city">
 
-                <option>София</option>
-                <option>Хасково</option>
+            <option>София</option>
+            <option>Хасково</option>
 
-            </select>
-            <br>
+        </select>
+        <br>
 
-            <span class = "label">Описание</span> <br>
-            <textarea name = "description" #description id = "description"></textarea>
-            <br>
+        <span class="label">Описание</span> <br>
+        <textarea name="description" #description id="description"></textarea>
+        <br>
 
-            <input type="submit" id="button" (click) = "getVal(name.value,city.value,description.value)" value="ПУБЛИКУВАЙ">
-        </div>
+        <input type="submit" id="button" (click)="getVal(name.value,city.value,description.value)" value="ПУБЛИКУВАЙ">
 
+    </div>
 
-
-
-
-
+</body>

@@ -24,7 +24,8 @@ import { CompanyJobPostsPageComponent } from './company-job-posts-page/company-j
 import { CompanyJobPostsDetailsComponent } from './company-job-posts-details/company-job-posts-details.component';
 import { CompanyJobPostsListComponent } from './company-job-posts-list/company-job-posts-list.component';
 import { LoginCompanyPageComponent } from './login-company-page/login-company-page.component';
-
+import { ChangeCompanyPasswordComponent } from './change-company-password/change-company-password.component';
+import { CompanyJobPostListingPageComponent } from './company-job-post-listing-page/company-job-post-listing-page.component';
 
 const routes: Routes = [
   {path: 'home-page-component', component: HomePageComponent},
@@ -50,7 +51,9 @@ const routes: Routes = [
   {path: 'company-job-posts-page', component:CompanyJobPostsPageComponent},
   {path: 'company-job-posts-details', component: CompanyJobPostsDetailsComponent},
   {path: 'company-job-posts-list', component: CompanyJobPostsListComponent},
-  {path: 'login-company-page-component', component: LoginCompanyPageComponent}
+  {path: 'login-company-page-component', component: LoginCompanyPageComponent},
+  {path: 'change-company-password-page', component: ChangeCompanyPasswordComponent},
+  {path: 'company-job-post-listing-page', component: CompanyJobPostListingPageComponent}
 ];
 
 @NgModule({
