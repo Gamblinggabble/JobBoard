@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { data } from 'jquery';
+import { Router } from '@angular/router';
 import { Company } from '../company';
 import { CompanyService } from '../company.service';
 import { JobpostService } from '../jobpost-service.service';
@@ -11,27 +11,14 @@ import { JobpostService } from '../jobpost-service.service';
 })
 export class AddJobPostComponent {
 
-  constructor(private jobpostService: JobpostService, private companyService: CompanyService) { }
+  constructor(private jobpostService: JobpostService, private companyService: CompanyService, private myRouter: Router) { }
 
   company!: Company;
-
-  // company1 = {
-  //   id: 1,
-  //     name: "sap",
-  //     email: "sap@abv.bg",
-  //     phoneNumber: "0893572342",
-  //     city: "Haskovo",
-  //     address: "Haskovo 1",
-  //     website: "SAP.com",
-  //     description: "asdmaslkdmaslkdmsaldmaslkdmaslkdmlksamdla",
-  //     password: "1234",
-  //     imageUrl: "dasdsada",
-  // }
 
   today = new Date();
 
   jobpost = {
-    id: 1000,
+    id: -1,
     title: " ",
     company: this.company,
     city: " ",
@@ -39,20 +26,26 @@ export class AddJobPostComponent {
     description: " "
   }
 
-  async getVal(name: string, city: string, description: string) {
+  getVal(name: string, city: string, description: string) {
 
-    const response = await (await this.companyService.findById(2)).subscribe(data => this.company = data);
+    this.companyService.findById(2).subscribe(data => {
 
-    this.jobpost = {
-      id: 1000,
-      title: name,
-      company: this.company,
-      city: city,
-      date: this.today,
-      description: description
-    }
+      this.company = data
 
-    this.jobpostService.addJobPost(this.jobpost);
+      this.jobpost = {
+        id: -1,
+        title: name,
+        company: this.company,
+        city: city,
+        date: this.today,
+        description: description
+      }
+
+      this.jobpostService.addJobPost(this.jobpost);
+      this.myRouter.navigateByUrl('create-posting-success-page-component');
+
+    });
+
   }
 
 }
