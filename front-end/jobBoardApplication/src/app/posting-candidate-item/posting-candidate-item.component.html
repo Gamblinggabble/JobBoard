@@ -27,7 +27,7 @@
             </div>
             <div class="jb-candidate-item--options">
                 <button class="jb-options--download-cv jb-button">Изтегли CV</button>
-                <button class="jb-options--favourite jb-button active"><span class="material-symbols-outlined">star</span></button>
+                <button class="jb-options--favourite jb-button active"  [class.active]="classApplied" (click)="toggleClass()"><span class="material-symbols-outlined">star</span></button>
             </div>
         </div>
     </div>
