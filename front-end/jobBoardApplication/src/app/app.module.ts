@@ -34,6 +34,9 @@ import { AddJobPostComponent } from './add-job-post/add-job-post.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { UpdateCompanyProfileComponent } from './update-company-profile/update-company-profile.component';
 import { RouterModule } from '@angular/router';
+import { CompanyJobPostsDetailsComponent } from './company-job-posts-details/company-job-posts-details.component';
+import { CompanyJobPostsListComponent } from './company-job-posts-list/company-job-posts-list.component';
+import { CompanyJobPostsPageComponent } from './company-job-posts-page/company-job-posts-page.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +71,10 @@ import { RouterModule } from '@angular/router';
     CompanyProfileMenuComponent,
     UserProfileMenuComponent,
     ChangePasswordComponent,
-    UpdateCompanyProfileComponent
+    UpdateCompanyProfileComponent,
+    CompanyJobPostsDetailsComponent,
+    CompanyJobPostsListComponent,
+    CompanyJobPostsPageComponent
   ],
   imports: [
     BrowserModule,

@@ -20,6 +20,10 @@ import { CompanyProfileMenuComponent } from './company-profile-menu/company-prof
 import { UserProfileMenuComponent } from './user-profile-menu/user-profile-menu.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { UpdateCompanyProfileComponent } from './update-company-profile/update-company-profile.component';
+import { CompanyJobPostsPageComponent } from './company-job-posts-page/company-job-posts-page.component';
+import { CompanyJobPostsDetailsComponent } from './company-job-posts-details/company-job-posts-details.component';
+import { CompanyJobPostsListComponent } from './company-job-posts-list/company-job-posts-list.component';
+
 
 const routes: Routes = [
   {path: 'home-page-component', component: HomePageComponent},
@@ -41,7 +45,10 @@ const routes: Routes = [
   {path: 'company-profile-menu', component: CompanyProfileMenuComponent},
   {path: 'user-profile-menu', component: UserProfileMenuComponent},
   {path: 'change-password-page', component: ChangePasswordComponent},
-  {path: 'update-company-profile-page', component: UpdateCompanyProfileComponent}
+  {path: 'update-company-profile-page', component: UpdateCompanyProfileComponent},
+  {path: 'company-job-posts-page', component:CompanyJobPostsPageComponent},
+  {path: 'company-job-posts-details', component: CompanyJobPostsDetailsComponent},
+  {path: 'company-job-posts-list', component: CompanyJobPostsListComponent}
 ];
 
 @NgModule({

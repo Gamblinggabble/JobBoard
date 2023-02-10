@@ -46,4 +46,20 @@
   width: 243px;
   height: 40px;
   margin: 20px 0px 0px 0px;
-}/*# sourceMappingURL=job-posting-details.component.css.map */
+  margin-right: 10px;
+}
+
+.jb-details-company-info--delete-button {
+  display: block;
+  background-color: #da3d3d;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  width: 243px;
+  height: 40px;
+  margin: 20px 0px 0px 0px;
+}
+
+.jb-details-button-span {
+  display: flex;
+}/*# sourceMappingURL=company-job-posts-details.component.css.map */

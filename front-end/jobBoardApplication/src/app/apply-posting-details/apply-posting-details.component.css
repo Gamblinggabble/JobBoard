@@ -18,7 +18,6 @@
 
 .jb-job-descr-details--item {
   display: block;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   margin: 0px;
