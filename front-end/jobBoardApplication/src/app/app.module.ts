@@ -37,6 +37,7 @@ import { RouterModule } from '@angular/router';
 import { CompanyJobPostsDetailsComponent } from './company-job-posts-details/company-job-posts-details.component';
 import { CompanyJobPostsListComponent } from './company-job-posts-list/company-job-posts-list.component';
 import { CompanyJobPostsPageComponent } from './company-job-posts-page/company-job-posts-page.component';
+import { CompaniesListItemComponent } from './companies-list-item/companies-list-item.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,8 @@ import { CompanyJobPostsPageComponent } from './company-job-posts-page/company-j
     UpdateCompanyProfileComponent,
     CompanyJobPostsDetailsComponent,
     CompanyJobPostsListComponent,
-    CompanyJobPostsPageComponent
+    CompanyJobPostsPageComponent,
+    CompaniesListItemComponent
   ],
   imports: [
     BrowserModule,
