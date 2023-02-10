@@ -10,17 +10,7 @@ body {
 }
 
 .jb-posting-panel--navigation:hover {
-  -webkit-animation: go-back-animation 0.2s ease-in-out forwards;
-          animation: go-back-animation 0.2s ease-in-out forwards;
-}
-
-@-webkit-keyframes go-back-animation {
-  from {
-    transform: translateX(0px);
-  }
-  to {
-    transform: translateX(-3px);
-  }
+  animation: go-back-animation 0.2s ease-in-out forwards;
 }
 
 @keyframes go-back-animation {

@@ -49,7 +49,6 @@ public class ProfileService {
     public Collection<Profile> findAllProfiles() {
         return profileRepository.findAll();
     }
-
 }
 
 

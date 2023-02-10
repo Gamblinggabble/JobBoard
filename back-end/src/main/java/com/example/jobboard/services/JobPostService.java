@@ -57,5 +57,14 @@ public class JobPostService {
         return jobPostRepository.findAll();
     }
 
+    public void deleteJobPostById(Long id) {
+        try {
+            jobPostRepository.deleteById(id);
+        }
+        catch (Exception e) {
+            System.out.println("Job post with id: " + id + " could not be deleted!");
+        }
+    }
+
 }
 
