@@ -23,6 +23,7 @@ import { UpdateCompanyProfileComponent } from './update-company-profile/update-c
 import { CompanyJobPostsPageComponent } from './company-job-posts-page/company-job-posts-page.component';
 import { CompanyJobPostsDetailsComponent } from './company-job-posts-details/company-job-posts-details.component';
 import { CompanyJobPostsListComponent } from './company-job-posts-list/company-job-posts-list.component';
+import { LoginCompanyPageComponent } from './login-company-page/login-company-page.component';
 
 
 const routes: Routes = [
@@ -48,7 +49,8 @@ const routes: Routes = [
   {path: 'update-company-profile-page', component: UpdateCompanyProfileComponent},
   {path: 'company-job-posts-page', component:CompanyJobPostsPageComponent},
   {path: 'company-job-posts-details', component: CompanyJobPostsDetailsComponent},
-  {path: 'company-job-posts-list', component: CompanyJobPostsListComponent}
+  {path: 'company-job-posts-list', component: CompanyJobPostsListComponent},
+  {path: 'login-company-page-component', component: LoginCompanyPageComponent}
 ];
 
 @NgModule({

@@ -22,6 +22,10 @@ export class CompanyService {
     return this.http.get<Company>(this.companiesUrl + '/' + id);
   }
 
+  public findByEmail(email: string): Observable<Company> {
+    return this.http.get<Company>(this.companiesUrl + '/ByEmail/' + email);
+  }
+
   public addCompany(Company: Company): void {
     this.http.post<Company>(this.companiesUrl + "/add", Company)
     .subscribe(
