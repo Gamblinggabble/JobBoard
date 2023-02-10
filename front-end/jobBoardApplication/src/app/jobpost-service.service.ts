@@ -33,4 +33,16 @@ export class JobpostService {
       }
     ); 
   }
+
+  public deleteJobPost(jobPostId: number): void {
+    this.http.delete<JobPost>(this.jobpostsUrl + "/deleteJobPost/" + jobPostId)
+    .subscribe(
+      data => {
+        console.log("Jobpost deleted successfully", data);
+      },
+      error => {
+        console.error("Error deleting jobpost", error);
+      }
+    ); 
+  }
 }

@@ -30,4 +30,9 @@ public class JobPostController {
     public void addJobPost(@RequestBody JobPost jobPost){
         jobPostService.saveJobPostToDb(jobPost);
     }
+
+    @DeleteMapping("/deleteJobPost/{id}")
+    public void deleteJobPost(@PathVariable Long id) {
+        jobPostService.deleteJobPostById(id);
+    }
 }
