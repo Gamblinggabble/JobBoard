@@ -15,15 +15,12 @@
         <li ngbNavItem>
           <a ngbNavLink routerLink="/companies-page-component" routerLinkActive="active" ariaCurrentWhenActive="page">Компании</a>
         </li>
-        <li ngbNavItem>
-          <a ngbNavLink routerLink="/about-page-component" routerLinkActive="active" ariaCurrentWhenActive="page">За сайта</a>
-        </li>
       </ul>
     </div>
     <a href="http://localhost:4200/login-page-component">
       <button *ngIf="!this.isLoggedIn" type="button" class="btn btn-primary">Вход</button>
     </a>
-    <a href="http://localhost:4200/user-profile-menu">
+    <a routerLink="/user-profile-menu">
     <button *ngIf="this.isLoggedIn" type="button" class="btn btn-warning">Профил</button>
    </a> 
    <a href="http://localhost:4200/home-page-component">

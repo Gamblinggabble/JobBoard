@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProfileService } from '../profile.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { ProfileService } from '../profile.service';
   styleUrls: ['./registration-person-page.component.scss']
 })
 export class RegistrationPersonPageComponent {
-  constructor(private profileService: ProfileService){} 
+  constructor(private profileService: ProfileService, private myRouter: Router){} 
 
 profile = {
     id: 12,
@@ -29,6 +30,7 @@ getVal(fName:string,lName:string,email:string,password:string)
       };
 
       this.profileService.addProfile(this.profile);
+      this.myRouter.navigateByUrl('home-page-component');
 
   }
 
