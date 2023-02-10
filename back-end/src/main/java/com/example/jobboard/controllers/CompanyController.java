@@ -48,4 +48,8 @@ public class CompanyController {
                     return company;
                 });
     }
+    @GetMapping("/ByEmail/{email}")
+    public Optional<Company> getCompanyByEmail(@PathVariable String email){
+        return companyService.findCompanyByEmail(email);
+    }
 }
