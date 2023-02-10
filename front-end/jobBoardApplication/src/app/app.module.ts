@@ -30,7 +30,6 @@ import { UpdateProfileComponent } from './update-profile/update-profile.componen
 import { ProfileMenuComponent } from './profile-menu/profile-menu.component';
 import { CompanyProfileMenuComponent } from './company-profile-menu/company-profile-menu.component';
 import { UserProfileMenuComponent } from './user-profile-menu/user-profile-menu.component';
-import { AddJobPostComponent } from './add-job-post/add-job-post.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +59,6 @@ import { AddJobPostComponent } from './add-job-post/add-job-post.component';
     UpdateProfileComponent,
     ProfileMenuComponent,
     UpdateProfileComponent,
-    AddJobPostComponent,
     ProfileMenuComponent,
     CompanyProfileMenuComponent,
     UserProfileMenuComponent

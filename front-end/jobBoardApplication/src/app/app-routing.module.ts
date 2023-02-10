@@ -15,7 +15,6 @@ import { RegistrationPersonPageComponent } from './registration-person-page/regi
 import { RegistrationCompanyPageComponent } from './registration-company-page/registration-company-page.component';
 import { ApplyPageComponent } from './apply-page/apply-page.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
-import { AddJobPostComponent } from './add-job-post/add-job-post.component';
 import { CompanyProfileMenuComponent } from './company-profile-menu/company-profile-menu.component';
 import { UserProfileMenuComponent } from './user-profile-menu/user-profile-menu.component';
 
@@ -35,7 +34,6 @@ const routes: Routes = [
   {path: 'registration-person-page-component', component: RegistrationPersonPageComponent},
   {path: 'registration-company-page-component', component: RegistrationCompanyPageComponent},
   {path: 'update-personal-profile-page', component: UpdateProfileComponent},
-  {path: 'add-job-post-page', component: AddJobPostComponent},
   {path: 'company-profile-menu', component: CompanyProfileMenuComponent},
   {path: 'user-profile-menu', component: UserProfileMenuComponent}
 ];
