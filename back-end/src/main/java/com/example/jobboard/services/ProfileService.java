@@ -36,7 +36,6 @@ public class ProfileService {
         }
     }
 
-
     public Optional<Profile> findProfileById(Long id) {
         Optional<Profile> profile = profileRepository.findProfileById(id);
         if (profile.isPresent())
@@ -50,8 +49,6 @@ public class ProfileService {
     public Collection<Profile> findAllProfiles() {
         return profileRepository.findAll();
     }
-
-
 }
 
 

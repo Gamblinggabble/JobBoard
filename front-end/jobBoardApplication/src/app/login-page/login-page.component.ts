@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProfileService } from '../profile.service';
 
 @Component({
@@ -7,7 +8,9 @@ import { ProfileService } from '../profile.service';
   styleUrls: ['./login-page.component.scss']
 })
 export class LoginPageComponent {
-  constructor(private profileService: ProfileService){} 
+  
+  
+  constructor(private profileService: ProfileService, private myRouter: Router){} 
 
   profile = {
       id: 12,
@@ -16,20 +19,25 @@ export class LoginPageComponent {
       email: " ",
       password: " "
       };
+
+    static ID:number;
   
   getVal(email:string,password:string)
     {
-        const login=this.profileService.findByEmail(email);
-        this.profile = {
-        id: 12,
-        firstName: "",
-        lastName: "",
-        email: email,
-        password: password
-        };
-  
-        this.profileService.addProfile(this.profile);
-  
+
+      this.profileService.findByEmail(email).subscribe(data => {
+        this.profile = data
+        
+        if(this.profile!=null && password == this.profile.password){
+        LoginPageComponent.ID = this.profile.id;
+        this.myRouter.navigateByUrl('home-page-component');
+       }
+        
+      });
     }
-  
+
+    static getID(): number {
+      return this.ID;
+    }
+
 }
