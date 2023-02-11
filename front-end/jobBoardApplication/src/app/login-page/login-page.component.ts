@@ -13,7 +13,7 @@ export class LoginPageComponent {
   constructor(private profileService: ProfileService, private myRouter: Router){} 
 
   profile = {
-      id: -1,
+      id: 12,
       firstName: " ",
       lastName: " ",
       email: " ",
@@ -21,6 +21,7 @@ export class LoginPageComponent {
       };
 
     static ID:number;
+    static isCompany:boolean;
   
   getVal(email:string,password:string)
     {
