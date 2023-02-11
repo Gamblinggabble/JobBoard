@@ -1,4 +1,5 @@
 import { Component, OnChanges, Input, AfterViewInit, AfterContentInit, AfterContentChecked } from '@angular/core';
+import { LoginCompanyPageComponent } from './login-company-page/login-company-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 
 @Component({
@@ -17,15 +18,11 @@ export class AppComponent implements AfterContentChecked {
   }
 
   ngAfterContentChecked() {
-    console.log("ngafterviewinit is fired");
-    if(LoginPageComponent.getID() != null) {
-      console.log("login page component is not null");
+    if(LoginPageComponent.getID() != null || LoginCompanyPageComponent.getID() != null) {
        this.isLoggedIn = true; 
     } else{
-    console.log("login page component is null");
     }
   }
-
   
    
 }
