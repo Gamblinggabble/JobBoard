@@ -53,7 +53,8 @@ const routes: Routes = [
   {path: 'company-job-posts-list', component: CompanyJobPostsListComponent},
   {path: 'login-company-page-component', component: LoginCompanyPageComponent},
   {path: 'change-company-password-page', component: ChangeCompanyPasswordComponent},
-  {path: 'company-job-post-listing-page', component: CompanyJobPostListingPageComponent}
+  {path: 'company-job-post-listing-page', component: CompanyJobPostListingPageComponent},
+  {path: 'app-apply-success-page', component: ApplySuccessPageComponent},
 ];
 
 @NgModule({

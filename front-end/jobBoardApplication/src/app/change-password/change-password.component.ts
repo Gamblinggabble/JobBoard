@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginPageComponent } from '../login-page/login-page.component';
 import { Profile } from '../profile';
 import { ProfileService } from '../profile.service';
 
@@ -15,7 +16,7 @@ export class ChangePasswordComponent {
   profile!: Profile;
 
   getVal(currentP: string, newP: string, newP_2: string) {
-    this.profileService.findById(4).subscribe(data => {
+    this.profileService.findById(LoginPageComponent.getID()).subscribe(data => {
       this.profile = data
 
       if (newP == newP_2 && this.profile.password == currentP && newP != currentP) {
@@ -25,7 +26,7 @@ export class ChangePasswordComponent {
 
       }
 
-      this.profileService.updateProfile(4, this.profile);
+      this.profileService.updateProfile(LoginPageComponent.getID(), this.profile);
       this.myRouter.navigateByUrl('change-password-success-page-component');
     });
 

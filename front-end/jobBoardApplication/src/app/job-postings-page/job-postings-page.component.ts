@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import * as $ from "jquery";
 import { JobPost } from '../job-post';
 import { JobpostService } from '../jobpost-service.service';
 
@@ -12,6 +11,8 @@ export class JobPostingsPageComponent {
 
   jobposts: JobPost[] = [];
   jobPostId!: number;
+
+  filters: string[] = [];
 
   constructor(private jobpostService: JobpostService) {}
 
@@ -35,5 +36,9 @@ export class JobPostingsPageComponent {
 
   onJobPostIdChanged(id: number): void {
     this.jobPostId = id;
+  }
+
+  onSearchFilterChange(filters: string[]): void {
+    this.filters = filters;
   }
 }

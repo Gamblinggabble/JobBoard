@@ -1,6 +1,8 @@
 package com.example.jobboard.model;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class JobPostCategoryType {
@@ -11,6 +13,9 @@ public class JobPostCategoryType {
 
     @Column(unique = true)
     private String name;
+
+    @ManyToMany(cascade = CascadeType.PERSIST)
+    private Set<JobPost> jobPosts = new HashSet<>();
 
     public JobPostCategoryType() {
     }

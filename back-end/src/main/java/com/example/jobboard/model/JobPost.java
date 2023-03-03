@@ -2,6 +2,8 @@ package com.example.jobboard.model;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class JobPost {
@@ -21,6 +23,9 @@ public class JobPost {
 
     private String description;
 
+    @ManyToMany(mappedBy = "jobPosts")
+    private Set<JobPostCategoryType> categoryTypes = new HashSet<>();
+
     public JobPost() {
     }
 
@@ -30,6 +35,10 @@ public class JobPost {
         this.date = date;
         this.description = description;
         this.city = city;
+    }
+
+    public void addCategory(JobPostCategoryType type) {
+        this.categoryTypes.add(type);
     }
 
     public Long getId() {

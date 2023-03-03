@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Application } from '../application';
 import { ApplyService } from '../apply.service';
 import { JobPost } from '../job-post';
@@ -23,7 +24,7 @@ export class ApplyFormComponent {
     cv: this.cvUploaded
   }
 
-  constructor(private applyService: ApplyService, private jobpostService: JobpostService) {}
+  constructor(private applyService: ApplyService, private jobpostService: JobpostService, private myRouter: Router) {}
   
   onFileSelected(event: any) {
 
@@ -35,8 +36,6 @@ export class ApplyFormComponent {
   }
 
   getValue(fname: string, lname: string, email: string): void {
-    console.log(fname + " " + lname + " " + email);
-    
     this.jobpostService.findById(2).subscribe(data => {
       this.jobPost = data;
     
@@ -51,7 +50,9 @@ export class ApplyFormComponent {
       };
     
       this.applyService.save(this.applyFormProps).subscribe();
+      this.myRouter.navigateByUrl('app-apply-success-page');
 
     });
   }
+
 }

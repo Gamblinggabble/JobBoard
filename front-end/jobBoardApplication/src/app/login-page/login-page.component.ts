@@ -13,7 +13,7 @@ export class LoginPageComponent {
   constructor(private profileService: ProfileService, private myRouter: Router){} 
 
   profile = {
-      id: 12,
+      id: -1,
       firstName: " ",
       lastName: " ",
       email: " ",

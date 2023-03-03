@@ -11,19 +11,19 @@ export class CompanyService {
   private companiesUrl: string;
 
   constructor(private http: HttpClient) { 
-    this.companiesUrl = 'http://localhost:4200/api/companies';
+    this.companiesUrl = 'http://localhost:4200/api/companies/';
   }
 
   public findAll(): Observable<Company[]> {
-    return this.http.get<Company[]>(this.companiesUrl);
+    return this.http.get<Company[]>(this.companiesUrl + "all/");
   }
 
   public findById(id: number): Observable<Company> {
-    return this.http.get<Company>(this.companiesUrl + '/' + id);
+    return this.http.get<Company>(this.companiesUrl + id);
   }
 
   public findByEmail(email: string): Observable<Company> {
-    return this.http.get<Company>(this.companiesUrl + '/ByEmail/' + email);
+    return this.http.get<Company>(this.companiesUrl + 'ByEmail/' + email);
   }
 
   public addCompany(Company: Company): void {
